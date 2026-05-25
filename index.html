@@ -40,8 +40,7 @@
   color: black;
   text-align: center;
   padding: 15px;
-  margin-top: 50px;
-}
+  margin-top: 50px;}
     </style>
   </head>
   <body>
@@ -62,8 +61,33 @@
       </div>
       <img src="photo.jpg" width="300px">
     </div>
+     <button onclick="direBonjour()">Clique moi !</button>
+      <button onclick="changerCouleur()">Changer la couleur !</button>
+      <button onclick="afficherSecret()">Afficher un secret !</button>
+<p id="secret" style="display:none; color:orange;">
+  Je suis en train de devenir développeur web ! 🔥
+</p>
     <footer>
-  <p>© 2026 M0iGnoN228 - Tous droits réservés</p>
+      <p>© 2026 M0iGnoN228 - Tous droits réservés</p>
 </footer>
+<script>
+  function afficherSecret() {
+  const element = document.getElementById("secret");
+  if (element.style.display === "none") {
+    element.style.display = "block";
+  } else {
+    element.style.display = "none";
+  }
+}
+  function direBonjour() {
+    alert("Bonjour, M0iGnoN228!");
+  }
+ function changerCouleur() {
+  const couleurs = ["red", "blue", "green", "purple", "pink", "yellow"];
+  const aleatoire = Math.floor(Math.random() * couleurs.length);
+  document.body.style.backgroundColor = couleurs[aleatoire];
+}
+</script>
+</script>
   </body>
 </html>
